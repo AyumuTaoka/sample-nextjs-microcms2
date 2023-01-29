@@ -1,12 +1,14 @@
+// pages/index.js
+import Link from "next/link";
 import { client } from "libs/client";
 
 export default function Home({ blogs }) {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div>
       <ul>
-        {blogs.map((blog) => (
-          <li className="mb-2" key={blog.id}>
-            <a>{blog.title}</a>
+        {blogs.map((blogs) => (
+          <li key={blogs.id}>
+            <Link href={`/blogs/${blogs.id}`}>{blogs.title}</Link>
           </li>
         ))}
       </ul>
