@@ -5,6 +5,7 @@ import { client } from "libs/client";
 export default function Home({ blogs }) {
   return (
     <div>
+      <h1>Next.js, Vercel, microCMS でブログサイトを作ってみた</h1>
       <ul>
         {blogs.map((blogs) => (
           <li key={blogs.id}>

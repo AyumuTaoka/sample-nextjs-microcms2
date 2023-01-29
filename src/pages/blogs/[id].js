@@ -1,4 +1,5 @@
 // pages/blogs/[id].js
+import Link from "next/link";
 import { client } from "libs/client";
 
 export default function blogsId({ blogs }) {
@@ -11,6 +12,7 @@ export default function blogsId({ blogs }) {
           __html: `${blogs.content}`,
         }}
       />
+      <Link href={`../`}>ホームに戻る</Link>
     </main>
   );
 }
